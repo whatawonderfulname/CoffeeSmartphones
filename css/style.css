@@ -1,0 +1,736 @@
+/* font */
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* general */
+.fittingImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* navbar, footer */
+#searchingForm {
+    display: none;
+    opacity: 0;
+    z-index: 2;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: all 0.5s;
+}
+#searchingForm > div {
+    background-color: #1b1e21;
+}
+#searchingForm input {
+    background-color: #1b1e21;
+    border: none;
+    caret-color: white;
+    color: white;
+}
+#searchingResult {
+    background-color: #a6b9cb;
+    color: black;
+}
+#searchingResult a {
+    text-decoration: none;
+    color: black;
+}
+#navbar {
+    font-weight: 300;
+}
+.searchingSymbol {
+    position: relative; 
+    font-size: 1.3rem;
+}
+#searchingCross {
+    position: relative; 
+    font-size: 1.3rem;
+    cursor: pointer;
+    top: -3px;
+}
+#navbar > .shoppingCart {
+    display: none;
+}
+#navbarNav .shoppingCart {
+    display: block;
+}
+.footerLink {
+    font-size: 1.25rem;
+}
+.footerLink:hover {
+    text-decoration: none;
+}
+@media only screen and (max-width: 991px) {
+    .navbar-brand {
+        margin: auto;
+    }
+    #navbar > .shoppingCart {
+        display: block;
+    }
+    #navbarNav .shoppingCart {
+        display: none;
+    }
+}
+.navbar-brand img {
+    width: auto;
+    height: 30px;
+    margin-bottom: 12px;
+}
+#navbar > .shoppingCart i {
+    position: relative; 
+    top: 1px; 
+    font-size: 1.3rem;
+}
+#navbar > .shoppingCart p {
+    position: relative; 
+    top: 10px;
+}
+#navbarNav .shoppingCart i {
+    position: relative; 
+    top: 1px; 
+    font-size: 1.1rem;
+}
+#navbarNav .shoppingCart p {
+    position: relative; 
+    top: 7px;
+}
+@media only screen and (max-width: 767px) {
+    #navbar .navbar-brand img {
+        height: 50px;
+        margin-bottom: 18px;
+    }
+    #navbarNav {
+        font-size: 1.33rem;
+    }
+    .searchingSymbol, #searchingCross {
+        font-size: 1.8rem;
+    }
+    .searchingSymbol {
+        top: 3px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    #navbar .navbar-brand img {
+        height: 9.4vw;
+        margin-bottom: 3.38vw;
+    }
+    #navbarNav {
+        font-size: 4vw;
+    }
+    #navbarNav .shoppingCart i, .searchingSymbol, #searchingCross {
+        font-size: 5.3vw;
+    }
+}
+
+/* home, products */
+#homeHero .heroItem {
+    width: 100%; 
+    height: 41vw;
+}
+#productHero {
+    width: 100%;
+    height: 31vw;
+}
+@media only screen and (max-width: 767px) {
+    #homeHero .heroItem {
+        width: 100%; 
+        height: 80vw;
+    }
+    #productHero {
+        width: 100%;
+        height: 60vw;
+        position: relative;
+        overflow: hidden;
+    }
+    #productsfittingImage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+    }
+}
+#horizontalBar {
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    top: 0;
+    z-index: 1;
+    font-size: 1.2rem;
+}
+#horizontalBar > div {
+    padding: 10px 16px 0 16px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#filterBar {
+    display: inline-block; 
+    vertical-align: top; 
+    width: 159px;
+}
+#filterBar span:nth-child(4) {
+    float: right;
+    display: none;
+}
+#filterBar hr {
+    display: none;
+}
+#criteriaBar {
+    display: inline-block; 
+    height: 2.1rem; 
+    overflow: hidden;
+}
+#criteriaBar .criterion {
+    height: 1.65rem;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+#criteriaBar .criterion span:nth-child(2) {
+    cursor: pointer;
+}
+#criteriaButton {
+    display: inline-block; 
+    vertical-align: top; 
+    width: 63px; 
+    height: 2.1rem;
+    overflow: hidden;
+    line-height: 1.9rem;
+}
+#criteriaButton span {
+    font-size: 1rem; 
+    cursor: pointer;
+}
+#sortBar {
+    vertical-align: top; 
+}
+#sort {
+    cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+    #sortBar {
+        display: flex;
+        justify-content: right;
+        width: 236px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    #horizontalBar {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    #horizontalBar > div {
+        padding: 25px 32px;
+    }
+    #filterBar {
+        width: 80px;
+        cursor: pointer;
+    }
+    #filterBar span:nth-child(2) {
+        display: none;
+    }
+    #filterBar span:nth-child(3) {
+        display: none;
+    }
+    #criteriaBar {
+        display: none; 
+    }
+    #criteriaButton {
+        display: none; 
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    #sortBar {
+        width: 384px;
+    }
+}
+@media only screen and (min-width: 576px) {
+   #sortBar {
+    float: right; 
+    text-align: right; 
+    } 
+}
+@media only screen and (max-width: 575px) {
+    #horizontalBar {
+        position: static;
+        font-size: 6vw;
+    }
+    #filterBar {
+        display: block;
+        width: 100%;
+    }
+    #filterBar hr {
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 37px;
+    }
+    #criteriaBar {
+        display: none; 
+    }
+    #criteriaButton {
+        display: none; 
+    }
+    #sortBar {
+        display: block;
+        float: none;
+        text-align: left;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+}
+#verticalBar {
+    flex: 1;
+}
+#verticalBar .sectionHeading {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+/* checkboxes (medium devices) */
+/* The wrapper */
+#verticalBar .wrapper {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default checkbox */
+#verticalBar .wrapper input {
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+}
+/* Create a custom checkbox */
+#verticalBar .checkmark {
+    position: absolute;
+    top: 3.5px;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 2.5px;
+    border: solid grey 1px;
+}
+/* On mouse-over, make the border blue */
+#verticalBar .wrapper:hover input ~ .checkmark {
+    border: solid #2196F3 1px;
+}
+/* When the checkbox is checked, add a blue background */
+#verticalBar .wrapper input:checked ~ .checkmark {
+    background-color: #2196F3;
+    border: solid #2196F3 1px;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+#verticalBar .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked */
+#verticalBar .wrapper input:checked ~ .checkmark::after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+#verticalBar .wrapper .checkmark::after {
+    left: 4px;
+    top: 0.5px;
+    width: 6px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    -webkit-transform: rotate(38deg);
+    -ms-transform: rotate(38deg);
+    transform: rotate(38deg);
+}
+#verticalBar button {
+    display: none;
+}
+.cards {
+    flex: 6;
+    padding: 8px 8px 0 8px;
+}
+.cards > div {
+    padding: 8px;
+    max-width: none;
+}
+.cards a {
+    text-decoration: none; 
+    color: black;
+}
+.cards a > div {
+    margin: auto; 
+    border-radius: 0.25rem;
+    box-shadow: 0 3px 4px 0 lightgrey;
+}
+.productImageDiv {
+    width: 170px; 
+    height: 205px; 
+    margin: auto;
+}
+.fullStar {
+    color: rgb(255, 199, 57);
+}
+.emptyStar {
+    color: rgb(186, 186, 186);
+}
+.cards .ratings {
+    font-size: 0.85rem;
+}
+.cards .notRated {
+    visibility: hidden;
+}
+@media only screen and (max-width: 991px) {
+    .cards {
+        flex: 4;
+    }  
+}
+@media only screen and (max-width: 767px) {
+    #verticalBar {
+        display: none;
+    }
+    #verticalBar .wrapper {
+        padding-left: 40px;
+        margin-bottom: 19px;
+    }
+    #verticalBar .wrapper input {
+        top: 6px;
+        left: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        cursor: pointer;
+    }
+    #verticalBar .checkmark {
+        top: 6px;
+        left: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 4px;
+    }
+    /* Style the checkmark/indicator */
+    #verticalBar .wrapper .checkmark::after {
+        left: 6px;
+        top: 1px;
+        width: 9px;
+        height: 16px;
+        border-width: 0 3.5px 3.5px 0;
+    }
+    #verticalBar button {
+        display: inline-block;
+    }
+    .cards {
+        padding: 16px 16px 0 16px;
+    }
+    .cards > div {
+        padding: 16px;
+    }
+    .cards a > div {
+        height: 409px;
+        border-radius: 0.38rem;
+    }
+    .cards .ratings {
+        font-size: 1.28rem;
+    }
+}
+@media only screen and (max-width: 575px) {
+    #verticalBar .wrapper {
+        padding-left: 7.52vw;
+        margin-bottom: 3.57vw;
+    }
+    #verticalBar .wrapper input {
+        top: 1.13vw;
+        left: 0;
+        height: 4.5vw;
+        width: 4.5vw;
+        cursor: pointer;
+    }
+    #verticalBar .checkmark {
+        top: 1.13vw;
+        left: 0;
+        height: 4.5vw;
+        width: 4.5vw;
+        border-radius: 0.75vw;
+    }
+    #verticalBar .wrapper .checkmark::after {
+        left: 1.25vw;
+        top: 0.2vw;
+        width: 1.69vw;
+        height: 3vw;
+        border-width: 0 0.66vw 0.66vw 0;
+    }
+    #verticalBar button {
+        display: inline-block;
+    }
+    .cards a > div {
+        height: 95vw;
+        border-radius: 1.13vw;
+    }
+    .productImageDiv {
+        width: 51vw; 
+        height: 61.5vw;
+    }
+    .cards .ratings {
+        font-size: 3.83vw;
+    }
+}
+
+/* details */
+.detailsAvatar {
+    width: 80px; 
+    border-radius: 50%;
+}
+.biggerRating {
+    font-size: 1.25rem;
+}
+#myClose {
+    z-index: -1;
+}
+@media only screen and (max-width: 767px) {
+    .detailsImage {
+        height: 100vw; 
+        width: 72vw;
+    }
+    .myH3 {
+        font-size: 2.3rem;
+    }
+    .myH5, .biggerRating {
+        font-size: 1.8rem;
+    }
+    .myP {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .myH3 {
+        font-size: 6.9vw;
+    }
+    .biggerRating {
+        font-size: 5.4vw;
+    }
+    .myH5,.biggerRating {
+        font-size: 5.4vw;
+    }
+    .myP {
+        font-size: 4.5vw;
+    }
+}
+
+/* faq */
+.fa-chevron-down {
+    transform: rotate(0deg);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.fa-chevron-down.open {
+    transform: rotate(180deg);
+    transition: all 0.5s;
+}
+
+/* contact, update billing details */
+#newMessage, #reviewText {
+    height: 150px;
+}
+#map {
+    height: 500px;
+}
+
+/* cart */
+.cartButton {
+    position: relative;
+    height: 1.6rem;
+    width: 1.6rem;
+    padding-bottom: 0.5rem;
+    background: white;
+    border-radius: 2px;
+    border: black solid 1px;
+}
+.cartButton > span {
+    position: absolute;
+    top: -1.5px;
+    left: 7.5px;
+}
+.cartButton > span.cartButtonMinus {
+    left: 8.5px;
+}
+.cartButton > span.cartButtonTrash {
+    top: 0;
+    left: 5px;
+}
+
+/* admin dashboard */
+.table4general {
+    border: 1px solid #6c757d;
+}
+.table4 {
+    border-radius: 0.25rem;
+}
+.table4cell1 {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.table4cell4 {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+@media only screen and (max-width: 991px) {
+    .table4cell1 {
+        border-bottom-left-radius: 0;
+    }
+    .table4cell2 {
+        border-top-right-radius: 0.25rem;
+    }
+    .table4cell3 {
+        border-bottom-left-radius: 0.25rem;
+    }
+    .table4cell4 {
+        border-top-right-radius: 0;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .cartButton {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .cartButton > span {
+        top: -1px;
+        left: 12px;
+    }
+    .cartButton > span.cartButtonMinus {
+        left: 14px;
+    }
+    .cartButton > span.cartButtonTrash {
+        top: 1px;
+        left: 8.5px;
+    }
+    .table4cell1 {
+        border-top-right-radius: 0.25rem;
+    }
+    .table4cell2 {
+        border-top-right-radius: 0;
+    }
+    .table4cell3 {
+        border-bottom-left-radius: 0;
+    }
+    .table4cell4 {
+        border-bottom-left-radius: 0.25rem;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .cartButton {
+        height: 7.5vw;
+        width: 7.5vw;
+    }
+    .cartButton > span {
+        left: 2.3vw;
+    }
+    .cartButton > span.cartButtonMinus {
+        left: 2.65vw;
+    }
+    .cartButton > span.cartButtonTrash {
+        top: 0.25vw;
+        left: 1.55vw;
+    }
+}
+.table3cell1, .table3cell2 {
+    border: 1px solid #6c757d;
+}
+.table3cell1 {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.table3cell2 {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+.table3subcell1 {
+    border: 1px solid #6c757d;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.table3subcell2 {
+    border: 1px solid #6c757d;
+    border-right: 0;
+}
+.table3subcell3 {
+    border-top: 1px solid #6c757d;
+    border-right: 1px solid #6c757d;
+    border-bottom: 1px solid #6c757d;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+@media only screen and (max-width: 991px) {
+    .table3cell1 {
+        border-radius: 0.25rem;
+    }
+    .table3cell2 {
+        border-top: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.25rem;
+    }
+    .table3subcell2 {
+        border: 1px solid #6c757d;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+    .table3subcell3 {
+        border: 1px solid #6c757d;
+        border-top: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.25rem;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .table3cell1 {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .table3subcell1 {
+        border-top-right-radius: 0.25rem;
+        border-bottom-left-radius: 0;
+    }
+    .table3subcell2 {
+        border-radius: 0;
+    }
+}
+/* ban, unban users */
+.firstCell {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.lastCell {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+.myBorder {
+    border: 2px solid #6c757d;
+}
+.borderTop {
+    border-top: 2px solid #6c757d;
+}
+.borderRight {
+    border-right: 2px solid #6c757d;
+}
+.myTable {
+    border-radius: 0.25rem;
+    border-collapse: separate;
+}
+.myColumn {
+    width: 20%;
+}
